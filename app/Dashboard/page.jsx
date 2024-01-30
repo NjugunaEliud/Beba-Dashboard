@@ -133,8 +133,8 @@ return (
       </thead>
       <tbody>
       <tr>
-      <td className="flex items-center">
-  <section className="flex items-center"> {/* Added a flex container for the image and text */}
+    <td data-label="Auction" className="flex items-center">
+  <section  className="flex items-center"> 
     <Image
       src={s24}
       alt="S24"
@@ -142,21 +142,19 @@ return (
       height={50}
       className="text-sm"
     />
-    <p className="text-sm ml-2">Samsung S24</p> {/* Added ml-2 for left margin */}
+    <p className="text-sm ml-2">Samsung S24</p> 
   </section>
 </td>
-
-
-      <td data-label="Name" className="ml-2">
+      <td data-label="Auction End" className="ml-2">
         Monday,June 10
         <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500"> in 5 days</span>
         </td>
-      <td data-label="Company">500</td>
-      <td data-label="Company">UGX 34</td>
+      <td data-label="Ticket sold">500</td>
+      <td data-label="Revenue">UGX 34</td>
     </tr>
     <tr>
-    <td className="flex items-center">
-  <section className="flex items-center"> 
+    <td data-label="Auction" className="flex items-center">
+  <section  className="flex items-center"> 
     <Image
       src={s24}
       alt="S24"
@@ -164,17 +162,15 @@ return (
       height={50}
       className="text-sm"
     />
-    <p className="text-sm ml-2">Iphone 15 promax</p> 
+    <p className="text-sm ml-2">Samsung S24</p> 
   </section>
 </td>
-
-
-      <td data-label="Name" className="ml-2">
-        Tuesday,June 21
-        <span className="bg-gray-100 rounded-full p-1 ml-12 text-gray-500">Next 2 weeks</span>
+      <td data-label="Auction End" className="ml-2">
+        Monday,June 10
+        <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500"> in 5 days</span>
         </td>
-      <td data-label="Company">1000</td>
-      <td data-label="Company">UGX 1,390</td>
+      <td data-label="Ticket sold">500</td>
+      <td data-label="Revenue">UGX 34</td>
     </tr>
       </tbody>
     </table>
@@ -209,9 +205,9 @@ return (
       </thead>
       <tbody>
       <tr>
-    <td data-label="Auction">#2343245</td>
+    <td data-label="Auction ID">#2343245</td>
 
-    <td className="flex items-center">
+    <td data-label="Bidder" className="flex items-center">
   <section className="flex items-center"> {/* Added a flex container for the image and text */}
     <Image
       src={avataImage}
@@ -224,16 +220,16 @@ return (
   </section>
 </td>
 
-      <td data-label="Auction">21/3/2024</td>
-      <td data-label="Auction End">18:30</td>
-      <td data-label="Ticket">1</td>
-      <td data-label="Revenue">UGX 2,000</td>
+      <td data-label="Date">21/3/2024</td>
+      <td data-label="Time">18:30</td>
+      <td data-label="Ticket sold">1</td>
+      <td data-label="Total price">UGX 2,000</td>
     </tr>
-      <tr>
-    <td data-label="Auction">#2343245</td>
+    <tr>
+    <td data-label="Auction ID">#2343245</td>
 
-    <td className="flex items-center">
-  <section className="flex items-center"> 
+    <td data-label="Bidder" className="flex items-center">
+  <section className="flex items-center"> {/* Added a flex container for the image and text */}
     <Image
       src={avataImage}
       alt="S24"
@@ -241,14 +237,14 @@ return (
       height={50}
       className="text-sm"
     />
-    <p className="text-sm ml-2">Ashley Wilson</p> 
+    <p className="text-sm ml-2">Ashley Wilson</p> {/* Added ml-2 for left margin */}
   </section>
 </td>
 
-      <td data-label="Auction">21/3/2024</td>
-      <td data-label="Auction End">18:30</td>
-      <td data-label="Ticket">1</td>
-      <td data-label="Revenue">UGX 2,000</td>
+      <td data-label="Date">21/3/2024</td>
+      <td data-label="Time">18:30</td>
+      <td data-label="Ticket sold">1</td>
+      <td data-label="Total price">UGX 2,000</td>
     </tr>
       </tbody>
     </table>
