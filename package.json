@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@mdi/font": "^7.4.47",
+    "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
+    "@mui/icons-material": "^5.15.6",
+    "@react-hook/media-query": "^1.1.1",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

@@ -3,9 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
     @apply bg-gray-100
-  }
+  } */
 
 /* tables */
 table {
@@ -34,8 +34,12 @@ td {
     lg:table-cell lg:text-left lg:py-2 lg:px-3 lg:align-middle lg:border-b-0;
 }
 
+tr:nth-child(even) td {
+  @apply bg-gray-100;
+}
+
 tr:nth-child(odd) td {
-  @apply lg:bg-gray-50;
+  @apply bg-white;
 }
 
 td:last-child {
@@ -43,7 +47,7 @@ td:last-child {
 }
 
 tbody tr:hover td {
-  @apply lg:bg-gray-100;
+  @apply lg:bg-white;
 }
 
 td:before {
@@ -51,20 +55,21 @@ td:before {
   @apply font-semibold pr-3 text-left lg:hidden;
 }
 
-td.checkbox-cell, th.checkbox-cell {
+td.checkbox-cell,
+th.checkbox-cell {
   @apply lg:w-5;
 }
 
 td.progress-cell progress {
-  @apply flex w-2/5 self-center
-    lg:w-full;
+  @apply flex w-2/5 self-center lg:w-full;
 }
 
 td.image-cell {
   @apply border-b-0 lg:w-6;
 }
 
-td.image-cell:before, td.actions-cell:before {
+td.image-cell:before,
+td.actions-cell:before {
   @apply hidden;
 }
 
@@ -73,7 +78,7 @@ td.image-cell .image {
 }
 
 .table-pagination {
-  @apply px-6 py-3 border-t border-gray-100;
+  @apply px-4 py-3 border-t border-indigo-100;
 }
 
 /* forms */
@@ -284,7 +289,7 @@ td.image-cell .image {
 
 /* cards */
 .card {
-  @apply bg-white border border-gray-100 rounded;
+  @apply bg-white border border-violet-100 rounded;
 }
 
 .card.has-table .card-content {
@@ -292,7 +297,7 @@ td.image-cell .image {
 }
 
 .card-content {
-  @apply p-6;
+  @apply p-2;
 }
 
 .card-content hr {
@@ -300,7 +305,7 @@ td.image-cell .image {
 }
 
 .card.empty .card-content {
-  @apply text-center py-12 text-gray-500;
+  @apply text-center py-8 text-gray-500;
 }
 
 .card-header {
@@ -308,7 +313,7 @@ td.image-cell .image {
 }
 
 .card-header-title, .card-header-icon {
-  @apply flex items-center py-3 px-4;
+  @apply flex items-center py-1 px-4;
 }
 
 .card-header-title {
@@ -316,7 +321,7 @@ td.image-cell .image {
 }
 
 .card-header-icon {
-  @apply justify-center;
+  @apply justify-center ;
 }
 
 .widget-label h3 {
