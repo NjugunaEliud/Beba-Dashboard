@@ -167,7 +167,7 @@ return (
 </td>
       <td data-label="Auction End" className="ml-2">
         <span className="sm:hidden">Monday,June 10</span>
-        <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500"> in 5 days</span>
+        <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500 sm:text-center sm:text-sm"> in 5 days</span>
         </td>
       <td data-label="Ticket sold">500</td>
       <td data-label="Revenue">UGX 34</td>
