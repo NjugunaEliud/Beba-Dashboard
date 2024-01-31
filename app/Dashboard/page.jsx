@@ -166,7 +166,7 @@ return (
   </section>
 </td>
       <td data-label="Auction End" className="ml-2">
-        Monday,June 10
+        <span className="sm:hidden">Monday,June 10</span>
         <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500"> in 5 days</span>
         </td>
       <td data-label="Ticket sold">500</td>
