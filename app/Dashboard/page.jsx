@@ -147,7 +147,7 @@ return (
 </td>
       <td data-label="Auction End" className="ml-2">
         Monday,June 10
-        <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500"> in 5 days</span>
+        <span className="bg-gray-200 rounded-full p-1 ml-2 sm:ml-12 text-gray-500 sm:text-center sm:text-sm">in 5 days</span>
         </td>
       <td data-label="Ticket sold">500</td>
       <td data-label="Revenue">UGX 34</td>
@@ -167,7 +167,7 @@ return (
 </td>
       <td data-label="Auction End" className="ml-2">
         <span className="sm:hidden">Monday,June 10</span>
-        <span className="bg-gray-200 rounded-full p-1 ml-12 text-gray-500 sm:text-center sm:text-sm"> in 5 days</span>
+        <span className="bg-gray-200 rounded-full p-1 ml-2 sm:ml-12 text-gray-500 sm:text-center sm:text-sm">in 5 days</span>
         </td>
       <td data-label="Ticket sold">500</td>
       <td data-label="Revenue">UGX 34</td>
@@ -229,7 +229,7 @@ return (
     <td data-label="Auction ID">#2343245</td>
 
     <td data-label="Bidder" className="flex items-center">
-  <section className="flex items-center"> {/* Added a flex container for the image and text */}
+  <section className="flex items-center"> 
     <Image
       src={avataImage}
       alt="S24"
@@ -237,7 +237,7 @@ return (
       height={50}
       className="text-sm"
     />
-    <p className="text-sm ml-2">Ashley Wilson</p> {/* Added ml-2 for left margin */}
+    <p className="text-sm ml-2">Ashley Wilson</p>
   </section>
 </td>
 
