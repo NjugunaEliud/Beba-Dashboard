@@ -1,14 +1,24 @@
 import { forwardRef } from "react";
 import Link from "next/link";
-import { ComputerDesktopIcon,UsersIcon , CalendarDaysIcon, InformationCircleIcon ,CreditCardIcon} from "@heroicons/react/24/outline";
+import { useState } from 'react';
 import { usePathname } from "next/navigation";
-import { CalendarMonth, CreditCard, CreditCardOffOutlined, DashboardOutlined, EmojiEventsRounded, Event, EventAvailable, EventAvailableOutlined, EventBusy, EventNote, EventNoteOutlined, EventOutlined, GroupAddOutlined, GroupWork, Groups3, MessageSharp, Settings } from "@mui/icons-material";
-import { CalendarIcon } from "@heroicons/react/24/solid";
-
+import { DashboardOutlined, Groups3, ProductionQuantityLimitsOutlined} from "@mui/icons-material";
+import { UserIcon } from "@heroicons/react/24/solid";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 const SideBar = forwardRef(({ showNav }, ref) => {
   const pathname = usePathname();
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleDropdownOptionClick = (option) => {
+    console.log(`Selected option: ${option}`);
+  };
 
   return (
     <div ref={ref} className="bg-slate-100 mt-14 fixed w-56 h-full shadow-sm">
@@ -31,37 +41,21 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </Link>
         <Link href="/caleder">
           <div
-            className={`pl-6  py-2 mx-5  mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
+            className={`pl-6  py-2 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               pathname == "/dashoard"
                 ? "bg-orange-100  text-orange-500"
                 : "text-gray-600 hover:bg-violet-700 hover:text-white"
             }`}
           >
             <div className="mr-2">
-              <CalendarIcon className="h-5 w-5" />
+              <ProductionQuantityLimitsOutlined className="h-5 w-5" />
             </div>
             <div>
-              <p>Caleder</p>
+              <p>Auction Products</p>
             </div>
           </div>
         </Link>
-        <Link href="/events">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              pathname == "/dashoard"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-600 hover:text-white hover:bg-violet-700 "
-            }`}
-          >
-            <div className="mr-2">
-              <EventOutlined className="h-5 w-5" />
-            </div>
-            <div>
-              <p>My Events</p>
-            </div>
-          </div>
-        </Link>
-        
+            
         <Link href="/team">
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
@@ -78,56 +72,41 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </div>
           </div>
         </Link>
-        <Link href="/purchases">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              pathname == "/billing"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-600 hover:text-white hover:bg-violet-700 "
-            }`}
-          >
-            <div className="mr-2">
-            <CreditCardIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Payment</p>
-            </div>
+        <div
+          className={`pl-6 py-2 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
+            pathname == "/dashoard"
+              ? "bg-orange-100 text-orange-500"
+              : "text-gray-600 hover:bg-violet-700 hover:text-white"
+          }`}
+        >
+          <div className="mr-2">
+            <UserIcon className="h-5 w-5" />
           </div>
-        </Link>
-        <Link href="/message">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              pathname == "/billing"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-600 hover:text-white hover:bg-violet-700 "
-            }`}
-          >
-            <div className="mr-2">
-              <MessageSharp className="h-5 w-5" />
-            </div>
-            <div className="flex flex-align-items">
-              <p>Messages</p>
-              <span className="bg-red-600 rounded-full ml-3 w-5 h-5 text-white text-center flex items-center justify-center mt-0.5">9</span>
-
-            </div>
+          <div>
+            <p>Bidders</p>
           </div>
-        </Link>
-        <Link href="/settings">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              pathname == "/billing"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-600 hover:text-white hover:bg-violet-700 "
-            }`}
-          >
-            <div className="mr-2">
-              <Settings className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Settings</p>
-            </div>
+          <div className="ml-2 cursor-pointer" onClick={handleDropdownToggle}>
+            <ExpandMoreIcon />
           </div>
-        </Link>
+        </div>
+      {showDropdown && (
+        <div className="mx-5 mb-3">
+          <div
+            className="bg-white rounded shadow-md py-2 px-4 cursor-pointer text-gray-600 hover:bg-violet-700 hover:text-white"
+            onClick={() => handleDropdownOptionClick('winners')}
+          >  
+            Winners
+          </div>
+          <div
+            className="bg-white rounded shadow-md py-2 px-4 cursor-pointer text-gray-600 hover:bg-violet-700 hover:text-white"
+            onClick={() => handleDropdownOptionClick('unsuccessful')}
+          >
+            Unsuccessful
+          </div>
+        </div>
+      )}
+    
+     
       </div>
     </div>
   );

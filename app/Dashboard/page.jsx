@@ -1,11 +1,11 @@
 "use client"
 import Layout from "../components/Layout";
-import { UsersIcon , ShoppingCartIcon , ChartBarIcon,ChevronDownIcon, EyeIcon, ShareIcon, ChevronLeftIcon, TicketIcon } from "@heroicons/react/24/solid";
+import {  ChevronLeftIcon } from "@heroicons/react/24/solid";
 import Image from 'next/image'
 import avataImage from '../../public/avatar.jpg'
 import s24 from '../../public/s24.jpg'
-import { CurrencyDollarIcon ,FilterIcon ,ChevronRightIcon} from "@heroicons/react/24/outline";
-import { ConfirmationNumberOutlined, CurrencyPound, FilterAltOutlined, MonetizationOnOutlined, RemoveRedEyeOutlined, ShareOutlined } from "@mui/icons-material";
+import { ChevronRightIcon} from "@heroicons/react/24/outline";
+import { ConfirmationNumberOutlined, FilterAltOutlined, MonetizationOnOutlined, RemoveRedEyeOutlined, ShareOutlined } from "@mui/icons-material";
 
 
 export default function Dashboard() {
@@ -23,9 +23,7 @@ return (
       </span>
         Filter
       </button>
-    
   </div>
-
     </div> 
   </div>
 </div>
@@ -152,26 +150,6 @@ return (
       <td data-label="Ticket sold">500</td>
       <td data-label="Revenue">UGX 34</td>
     </tr>
-    <tr>
-    <td data-label="Auction" className="flex items-center">
-  <section  className="flex items-center"> 
-    <Image
-      src={s24}
-      alt="S24"
-      width={50}
-      height={50}
-      className="text-sm"
-    />
-    <p className="text-sm ml-2">Samsung S24</p> 
-  </section>
-</td>
-      <td data-label="Auction End" className="ml-2">
-        <span className="sm:hidden">Monday,June 10</span>
-        <span className="bg-gray-200 rounded-full p-1 ml-2 sm:ml-12 text-gray-500 sm:text-center sm:text-sm">in 5 days</span>
-        </td>
-      <td data-label="Ticket sold">500</td>
-      <td data-label="Revenue">UGX 34</td>
-    </tr>
       </tbody>
     </table>
   </div>
@@ -201,30 +179,10 @@ return (
           <th>Time</th>
           <th>Ticket sold</th>
           <th>Total price</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-      <tr>
-    <td data-label="Auction ID">#2343245</td>
-
-    <td data-label="Bidder" className="flex items-center">
-  <section className="flex items-center"> {/* Added a flex container for the image and text */}
-    <Image
-      src={avataImage}
-      alt="S24"
-      width={50}
-      height={50}
-      className="text-sm"
-    />
-    <p className="text-sm ml-2">Ashley Wilson</p> {/* Added ml-2 for left margin */}
-  </section>
-</td>
-
-      <td data-label="Date">21/3/2024</td>
-      <td data-label="Time">18:30</td>
-      <td data-label="Ticket sold">1</td>
-      <td data-label="Total price">UGX 2,000</td>
-    </tr>
     <tr>
     <td data-label="Auction ID">#2343245</td>
 
@@ -245,6 +203,11 @@ return (
       <td data-label="Time">18:30</td>
       <td data-label="Ticket sold">1</td>
       <td data-label="Total price">UGX 2,000</td>
+      <td> 
+        <button className="bg-gray-100 py-2 px-4 rounded-md  text-violet-600">
+        View
+      </button>
+      </td>
     </tr>
       </tbody>
     </table>
@@ -261,9 +224,8 @@ return (
       <button type="button" className="button">4</button>
       <button type="button" className="button">...</button>
       <button type="button" className="button">10</button>
-      <button type="button" className="button">5</button>
+      <button type="button" className="button">11</button>
       <span><ChevronRightIcon className="w-5 h-5" /></span>
-
     </div>
   </div>
 </div>

@@ -18,6 +18,7 @@
     "@mdi/react": "^1.6.1",
     "@mui/icons-material": "^5.15.6",
     "@react-hook/media-query": "^1.1.1",
+    "axios": "^1.6.7",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

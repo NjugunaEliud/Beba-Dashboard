@@ -26,7 +26,7 @@ const handleClick = ()=>{
 router.push('/create')
 }
   return (
-    <Disclosure as="nav" className="bg-white border-b  fixed w-full h-14">
+    <Disclosure as="nav" className="bg-white border-b  fixed w-full h-14 z-50">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -119,10 +119,10 @@ router.push('/create')
                 <Menu.Item>
                   {({ active }) => (
                     <Link
-                      href="#"
+                      href="/profile"
                       className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                     >
-                      Your Profile
+                     Profile
                     </Link>
                   )}
                 </Menu.Item>

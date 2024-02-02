@@ -1,0 +1,73 @@
+{"user":[
+    {
+      "id": 1,
+      "fullname": "John Doe",
+      "phone": "555-1234",
+      "email": "john.doe@example.com",
+      "username": "johndoe"
+    },
+    {
+      "id": 2,
+      "fullname": "Jane Smith",
+      "phone": "555-5678",
+      "email": "jane.smith@example.com",
+      "username": "janesmith"
+    },
+    {
+      "id": 3,
+      "fullname": "Bob Johnson",
+      "phone": "555-9876",
+      "email": "bob.johnson@example.com",
+      "username": "bobjohnson"
+    },
+    {
+      "id": 4,
+      "fullname": "Alice Williams",
+      "phone": "555-4321",
+      "email": "alice.williams@example.com",
+      "username": "alicewilliams"
+    },
+    {
+      "id": 5,
+      "fullname": "Chris Miller",
+      "phone": "555-8765",
+      "email": "chris.miller@example.com",
+      "username": "chrismiller"
+    },
+    {
+      "id": 6,
+      "fullname": "Emily Davis",
+      "phone": "555-3456",
+      "email": "emily.davis@example.com",
+      "username": "emilydavis"
+    },
+    {
+      "id": 7,
+      "fullname": "Mike Wilson",
+      "phone": "555-6543",
+      "email": "mike.wilson@example.com",
+      "username": "mikewilson"
+    },
+    {
+      "id": 8,
+      "fullname": "Sara Brown",
+      "phone": "555-7890",
+      "email": "sara.brown@example.com",
+      "username": "sarabrown"
+    },
+    {
+      "id": 9,
+      "fullname": "Tom Anderson",
+      "phone": "555-2345",
+      "email": "tom.anderson@example.com",
+      "username": "tomanderson"
+    },
+    {
+      "id": 10,
+      "fullname": "Olivia Jones",
+      "phone": "555-8765",
+      "email": "olivia.jones@example.com",
+      "username": "oliviajones"
+    }
+  ]
+}
