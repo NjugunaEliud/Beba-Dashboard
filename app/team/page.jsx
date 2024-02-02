@@ -5,7 +5,7 @@ import Link from 'next/link'
 import axios from 'axios'
 
 async function getAdmins(){
-  const res = await axios.get('http://localhost:4000/user',{
+  const res = await axios.get('https://jsonplaceholder.typicode.com/users',{
     next:{
       revalidate : 30
     }

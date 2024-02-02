@@ -4,7 +4,7 @@ import Layout from '@/app/components/Layout';
 import Link from 'next/link';
 
 async function getAdmin(id){
-  const res = await axios.get('http://localhost:4000/user/' + id ,{
+  const res = await axios.get('https://jsonplaceholder.typicode.com/users/' + id ,{
     next:{
       revalidate : 60
     }
