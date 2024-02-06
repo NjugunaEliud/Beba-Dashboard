@@ -50,8 +50,8 @@ export default async function Teams() {
       <td data-label="UserName">{admin.username}</td>
       <td >
       <span  className='flex items-center justify-between'>
-      <Link href={`/team/${admin.id}`}><Search className="block h-4 w-4 hover:cursor-pointer text-violet-700" aria-hidden="true" /></Link>
-      <Edit className="block h-4 w-4 hover:cursor-pointer text-violet-700" aria-hidden="true" />
+      <Link href={`/team/${admin.id}`}><Search className="block h-4 w-4 hover:cursor-pointer text-violet-700 " aria-hidden="true" /></Link>
+      <Link href={`/team/${admin.id}/update`}><Edit className="block h-4 w-4 hover:cursor-pointer text-violet-700" aria-hidden="true" /></Link>
       <Delete className="block h-4 w-4 hover:cursor-pointer text-violet-700" aria-hidden="true" />
       </span>
       </td>

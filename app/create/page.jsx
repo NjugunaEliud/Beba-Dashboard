@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import { LockClosedIcon, UserIcon, SparklesIcon } from "@heroicons/react/24/solid";
 
 export default function Create() {
   return (

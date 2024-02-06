@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": "4495",
+      "email": "Kamaa@gmail.com",
+      "utype": "admin",
+      "mobile_no": "254719196591",
+      "name": "K",
+      "password": "1234567890"
+    },
+    {
+      "id": "81a1",
+      "email": "k@gmail.com",
+      "utype": "admin",
+      "mobile_no": "25479191916591",
+      "name": "R",
+      "password": "1234567890"
+    },
+    {
+      "id": "1bfc",
+      "email": "john@gmail.com",
+      "utype": "admin",
+      "mobile_no": "123456789",
+      "name": "K",
+      "password": "1234567890"
+    },
+    {
+      "id": "4c6f",
+      "email": "h@gmail.com",
+      "utype": "admin",
+      "mobile_no": "1234567890",
+      "name": "G",
+      "password": "1234567890"
+    },
+    {
+      "id": "ca90",
+      "email": "tt@gmail.com",
+      "utype": "admin",
+      "mobile_no": "1234567890",
+      "name": "H",
+      "password": "1234567890"
+    },
+    {
+      "id": "fbc3",
+      "email": "g@gmail.com",
+      "utype": "admin",
+      "mobile_no": "12345678",
+      "name": "P",
+      "password": "1234567890"
+    },
+    {
+      "id": "8928",
+      "email": "h@gmail.com",
+      "utype": "admin",
+      "mobile_no": "123456789",
+      "name": "f",
+      "password": "1234567890"
+    },
+    {
+      "id": "c076",
+      "email": "h@gmail.com",
+      "utype": "admin",
+      "mobile_no": "123456789",
+      "name": "f",
+      "password": "1234567890"
+    },
+    {
+      "id": "8d12",
+      "email": "r@gmail.com",
+      "utype": "admin",
+      "mobile_no": "wwww",
+      "name": "wwww",
+      "password": "wwwwwwwgggg"
+    },
+    {
+      "id": "1d57",
+      "email": "y@gmail.com",
+      "utype": "admin",
+      "mobile_no": "1234567890",
+      "name": "E",
+      "password": "1234567890"
+    },
+    {
+      "id": "eb23",
+      "email": "q@gmail.com",
+      "utype": "admin",
+      "mobile_no": "1234567890",
+      "name": "nj@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "id": "7d71",
+      "email": "k@gmail.com",
+      "utype": "auctioneer",
+      "mobile_no": "254719196591",
+      "name": "wertt",
+      "password": "1234567890"
+    },
+    {
+      "id": "ee44",
+      "email": "f@gtmail.com",
+      "utype": "auctioneer",
+      "mobile_no": "254719196591",
+      "name": "123456789",
+      "password": "123456789123"
+    },
+    {
+      "id": "a10a",
+      "email": "k@gmail.com",
+      "utype": "auctioneer",
+      "mobile_no": "1234567890",
+      "name": "k",
+      "password": "1234567890"
+    },
+    {
+      "id": "93eb",
+      "email": "b@gmail.coom",
+      "utype": "admin",
+      "mobile_no": "25471919767",
+      "name": "K",
+      "password": "1234567890"
+    },
+    {
+      "id": "596f",
+      "email": "nu@gmail.com",
+      "utype": "user",
+      "mobile_no": "1234567890",
+      "name": "qwertyuiop",
+      "password": "1234567890"
+    }
+  ]
+}
