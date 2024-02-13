@@ -35,11 +35,11 @@ const SideBar = forwardRef(({ showNav }, ref) => {
               <DashboardOutlined className="h-5 w-5" />
             </div>
             <div>
-              <p>Dashboard</p>
+              <p className="text-sm">Dashboard</p>
             </div>
           </div>
         </Link>
-        <Link href="/caleder">
+        <Link href="/auctions">
           <div
             className={`pl-6  py-2 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               pathname == "/dashoard"
@@ -51,7 +51,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
               <ProductionQuantityLimitsOutlined className="h-5 w-5" />
             </div>
             <div>
-              <p>Auction Products</p>
+              <p className="text-sm">Auction Products</p>
             </div>
           </div>
         </Link>
@@ -68,7 +68,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
               <Groups3 className="h-5 w-5" />
             </div>
             <div>
-              <p>Teams</p>
+              <p className="text-sm">Teams</p>
             </div>
           </div>
         </Link>
@@ -83,7 +83,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             <UserIcon className="h-5 w-5" />
           </div>
           <div>
-            <p>Bidders</p>
+            <p className="text-sm">Bidders</p>
           </div>
           <div className="ml-2 cursor-pointer" onClick={handleDropdownToggle}>
             <ExpandMoreIcon />

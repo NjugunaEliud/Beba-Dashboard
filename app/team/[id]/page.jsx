@@ -4,7 +4,7 @@ import Layout from '@/app/components/Layout';
 import Link from 'next/link';
 
 async function getAdmin(id){
-  const res = await axios.get('https://us-central1-bidleo-398811.cloudfunctions.net/signup_as_user' + id ,{
+  const res = await axios.get('http://localhost:4002/auctioneers/' + id ,{
     next:{
       revalidate : 60 * 60 * 24
     }

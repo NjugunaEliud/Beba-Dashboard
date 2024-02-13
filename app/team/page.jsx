@@ -1,20 +1,37 @@
+"use client"
 import React from 'react'
 import Layout from '../components/Layout'
 import { Delete, Edit, Search } from '@mui/icons-material'
 import Link from 'next/link'
-import axios from 'axios'
+import Axios from 'axios'
+import { useState , useEffect } from 'react'
 
-async function getAdmins(){
-  const res = await axios.get('https://jsonplaceholder.typicode.com/users',{
-    next:{
-      revalidate : 30
-    }
-  })
-  return res.data;
-  }
+export default function Teams() {
+  const [admins, setAdmins] = useState([]);
 
-export default async function Teams() {
- const admins = await getAdmins();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    Axios.get(
+      "https://us-central1-bidleo-398811.cloudfunctions.net/viewauctioneer",
+      {}
+    )
+      .then((res) => {
+        // console.log("GEtting Products DATA From::", res);
+        const auctioneers = res.data.admins(
+          (admin) => admin.utype === "auctioneer"
+        );
+
+        setLoading(true);
+        setAdmins(auctioneers );
+      })
+      .catch((err) => {
+        // setLoading(false);
+        console.log(err);
+      });
+  }, []);
+
+
   return (
     <Layout>
  <main className='mb-3'>
@@ -36,7 +53,7 @@ export default async function Teams() {
           <th>Full Name</th>
           <th>Phone</th>
           <th>Email</th>
-          <th>Username</th>
+          <th>User Type</th>
           <th></th>
         </tr>
       </thead>
@@ -44,10 +61,10 @@ export default async function Teams() {
     {admins.map(admin =>(
       <tr key={admin.id}>
       <td data-label="ID">{admin.id}</td>
-      <td data-label="Name">{admin.fullname}</td>
-      <td data-label="Phone">{admin.phone}</td>
+      <td data-label="Name">{admin.name}</td>
+      <td data-label="Phone">{admin.mobile_no}</td>
       <td data-label="Email">{admin.email}</td>
-      <td data-label="UserName">{admin.username}</td>
+      <td data-label="UserType">{admin.utype}</td>
       <td >
       <span  className='flex items-center justify-between'>
       <Link href={`/team/${admin.id}`}><Search className="block h-4 w-4 hover:cursor-pointer text-violet-700 " aria-hidden="true" /></Link>

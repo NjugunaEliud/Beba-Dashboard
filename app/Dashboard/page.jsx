@@ -6,9 +6,34 @@ import avataImage from '../../public/avatar.jpg'
 import s24 from '../../public/s24.jpg'
 import { ChevronRightIcon} from "@heroicons/react/24/outline";
 import { ConfirmationNumberOutlined, FilterAltOutlined, MonetizationOnOutlined, RemoveRedEyeOutlined, ShareOutlined } from "@mui/icons-material";
+import withAuth from "../components/WithAuth";
+import Axios from 'axios'
+import { useState , useEffect } from 'react'
 
+function Dashboard() {
+  const [products, setProducts] = useState([]);
 
-export default function Dashboard() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    Axios.get(
+      "https://us-central1-bidleo-398811.cloudfunctions.net/viewbids",
+      {}
+    )
+      .then((response) => {
+        console.log("GEtting Products DATA From::", response);
+        console.log(response)
+        const filteredProducts = res.data.products.filter(
+          (product) => product.type === "bidding"
+        );
+
+        setLoading(true);
+        setProducts(filteredProducts);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 return (
 <Layout>
 <p className="text-gray-700  mt-4">Account/Dashboard</p>
@@ -130,7 +155,8 @@ return (
         </tr>
       </thead>
       <tbody>
-      <tr>
+   
+    <tr>
     <td data-label="Auction" className="flex items-center">
   <section  className="flex items-center"> 
     <Image
@@ -150,6 +176,7 @@ return (
       <td data-label="Ticket sold">500</td>
       <td data-label="Revenue">UGX 34</td>
     </tr>
+
       </tbody>
     </table>
   </div>
@@ -183,8 +210,9 @@ return (
         </tr>
       </thead>
       <tbody>
-    <tr>
-    <td data-label="Auction ID">#2343245</td>
+    {products.map(product =>(
+    <tr key={product.id}>
+    <td data-label="Auction ID">{product.auction_no}</td>
 
     <td data-label="Bidder" className="flex items-center">
   <section className="flex items-center"> 
@@ -209,6 +237,7 @@ return (
       </button>
       </td>
     </tr>
+      ))}
       </tbody>
     </table>
   </div>
@@ -233,4 +262,4 @@ return (
       </Layout>
     );
   }
-  
+  export default withAuth(Dashboard);

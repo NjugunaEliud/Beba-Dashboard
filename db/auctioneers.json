@@ -1,0 +1,29 @@
+{
+  "auctioneers": [
+    {
+      "id": "847b",
+      "email": "kamau@gmail.com",
+      "utype": "user",
+      "mobile_no": "25412345678",
+      "name": "Kamau",
+      "Password": "12345678",
+      "role": "auctioneer"
+    },
+    {
+      "id": "8873",
+      "email": "Ands@gmail.com",
+      "utype": "auctioneer",
+      "mobile_no": "2547123456789",
+      "name": "Andrews",
+      "Password": "12345678"
+    },
+    {
+      "id": "0082",
+      "email": "ka@gmail.com",
+      "utype": "auctioneer",
+      "mobile_no": "254719196591",
+      "name": "Ka",
+      "Password": "12345678"
+    }
+  ]
+}

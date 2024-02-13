@@ -1,0 +1,17 @@
+{
+  "products": [
+    {
+      "id": "a164",
+      "product_id": "31287beb-c45a-4d30-afc8-c3c632fc3fd8",
+      "category": "Electronics",
+      "name": "Samsung S24",
+      "cost": "40000",
+      "description": "new",
+      "start_date": "2024-02-11",
+      "end_date": "2024-02-14",
+      "organization_mobile_no": "254712345678",
+      "image_uri": "https://firebasestorage.googleapis.com/v0/b/bidleo-398811.appspot.com/o/products%2Fs24.jpg480b8e71-3b3f-4239-a78d-ba285bf6f89c?alt=media&token=eae48e45-7c53-4319-a341-e6921839ab52",
+      "type": "bidding"
+    }
+  ]
+}
